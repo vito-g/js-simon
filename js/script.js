@@ -6,3 +6,12 @@
 // * Pensate prima in italiano.
 // * Dividete in piccoli problemi la consegna.
 // * Individuate gli elementi di cui avete bisogno per realizzae il programma.
+-----------------------------------------------------------------------------------------------------------
+// console.log ('prova colegamento script');
+
+// Un alert espone 5 numeri casuali diversi:
+Mi occorrerà, certamente una FX per il calcolo randomico degli stessi
+function random(a, b) {
+  var randomNumber = Math.floor((Math.random() * b) + a);
+  return randomNumber;//restituirà il valore calcolato, nel punto in cui la funzione verrà richiamata.
+}
