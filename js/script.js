@@ -26,3 +26,13 @@ for (var i = 0; i < 5; i++) {
   msg += ' ' + numberArray[i];
 }
  alert('Ecco i numeri che dovrai ricordare: ' + msg);
+
+// Dopo 30 secondi l’utente deve inserire, un prompt alla volta, i numeri che ha visto precedentemente.
+
+//Il dato numerico che l'utente inserirà attraverso un prompt (e che salverò in una var "numUser") dovrà, però, esser validato. Creo per questo una FX ad hoc che chiamo "numberValid" il cui parametro "inputUtente" sarà popolato dal valore di "numUser" (che ne sarà, dunque, argomento):
+function numberValid(inputUtente) {
+  if (isNaN(inputUtente)) {
+    return false;
+  }
+  return true;
+}
