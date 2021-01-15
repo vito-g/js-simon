@@ -37,7 +37,32 @@ function numberValid(inputUtente) {
   return true;
 }
 
+scoreCounter = 0;
+
+// for (var i = 0; i < 5; i++) {
+//   var numUser = parseInt(prompt('Inserisci un numero che ricordi di aver visto'));
+//   console.log(numUser);
+//   if (numberValid(numUser)) {
+//     if (numberArray.includes(numUser)) {
+//       scoreCounter += 1;
+//       console.log(scoreCounter);
+//     } else {
+//       alert('Devi inserire un numero');
+//     }
+//   }
+// }
+// alert('Ecco il tuo punteggio: ' + scoreCounter);
+
 for (var i = 0; i < 5; i++) {
-  var numUser = parseInt(prompt('Inserisci il primo numero che ricordi di aver visto'));
+  var numUser = parseInt(prompt('Inserisci un numero che ricordi di aver visto'));
   console.log(numUser);
+  if (!numberValid(numUser)) {
+    alert('Devi inserire un numero');
+    } else {
+      if (numberArray.includes(numUser)) {
+        scoreCounter += 1;
+        console.log(scoreCounter);
+    }
+  }
 }
+alert('Ecco il tuo punteggio: ' + scoreCounter);
