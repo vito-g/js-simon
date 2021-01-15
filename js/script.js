@@ -17,10 +17,12 @@ function random(a, b) {
 }
 
 var numberArray = [];
-
+var msg= '';
 for (var i = 0; i < 5; i++) {
   // console.log(random(1,100));
   var number = random(1,100);
   numberArray.push(number);
   console.log(numberArray);
+  msg += ' ' + numberArray[i];
 }
+ alert('Ecco i numeri che dovrai ricordare: ' + msg);
