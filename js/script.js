@@ -9,7 +9,7 @@
 // -----------------------------------------------------------------------------------------------------------
 // console.log ('prova colegamento script');
 
-// Un alert espone 5 numeri casuali diversi:
+// STEP 1: Un alert espone 5 numeri casuali diversi:
 // Mi occorrerà, certamente una FX per il calcolo randomico degli stessi
 function random(a, b) {
   var randomNumber = Math.floor((Math.random() * b) + a);
@@ -27,12 +27,17 @@ for (var i = 0; i < 5; i++) {
 }
  alert('Ecco i numeri che dovrai ricordare: ' + msg);
 
-// Dopo 30 secondi l’utente deve inserire, un prompt alla volta, i numeri che ha visto precedentemente.
+//STEP 2: Dopo 30 secondi l’utente deve inserire, un prompt alla volta, i numeri che ha visto precedentemente.
 
-//Il dato numerico che l'utente inserirà attraverso un prompt (e che salverò in una var "numUser") dovrà, però, esser validato. Creo per questo una FX ad hoc che chiamo "numberValid" il cui parametro "inputUtente" sarà popolato dal valore di "numUser" (che ne sarà, dunque, argomento):
+//Il dato numerico che l'utente inserirà attraverso un prompt (e che salverò in una var "numUser") dovrà, però, esser validato. Creo per questo una FX ad hoc che chiamo "numberValid" il cui parametro "inputUtente" sarà popolato dal valore di "numUser" (che ne diventerà, dunque, argomento):
 function numberValid(inputUtente) {
   if (isNaN(inputUtente)) {
     return false;
   }
   return true;
+}
+
+for (var i = 0; i < 5; i++) {
+  var numUser = parseInt(prompt('Inserisci il primo numero che ricordi di aver visto'));
+  console.log(numUser);
 }
