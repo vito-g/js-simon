@@ -16,6 +16,11 @@ function random(a, b) {
   return randomNumber;//restituirà il valore calcolato, nel punto in cui la funzione verrà richiamata.
 }
 
+var numberArray = [];
+
 for (var i = 0; i < 5; i++) {
-  console.log(random(1,100));
+  // console.log(random(1,100));
+  var number = random(1,100);
+  numberArray.push(number);
+  console.log(numberArray);
 }
