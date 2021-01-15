@@ -66,3 +66,5 @@ for (var i = 0; i < 5; i++) {
   }
 }
 alert('Ecco il tuo punteggio: ' + scoreCounter);
+
+// In realtà, visto che non so quante volte sarà necessario chiedere all'utente di inserire un numero, perchè si raggiungano 5 valori inseriti validi, allora dovrei usare un ciclo WHILE.
