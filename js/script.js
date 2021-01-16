@@ -59,7 +59,7 @@ setTimeout(function() {
 	Dunque, il prompt va inserito in un CICLO in cui si VERIFICHINO le seguenti CONDIZIONI:
 	-(a)- il DATO inserito sia NUMERICO;
 	-(b)- SEMPRE DIVERSO;
-	-(c)- va da sè che, l' ALERT di input utente debba esser ESEGUITO per un NUMERO di VOLTE NECESSARIO ad ACQUISIRE i 5 DATI RICHIESTI.
+	-(c)- va da sè che, il PROMPT di input utente debba esser ESEGUITO per un NUMERO di VOLTE NECESSARIO ad ACQUISIRE i 5 DATI RICHIESTI.
 
 	 Quindi, se necessario, per un numero di volte anche superiore a 5. Per cui, per le stesse ragioni, riscontrate precedentemente, dovrò appellarmi ad un CICLO WHILE.
 
