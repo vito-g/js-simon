@@ -41,7 +41,7 @@ while (arrayPcNumber.length < 5) { //A condizione che la LUNGHEZZA dell'ARRAY ri
 }
 alert('Memorizza questi numeri:' + msg);//(3)
 
-//A questo punto dovrò MOSTRARE all' UTENTE i NUMERI GENERATI attraverso un ALERT. Dichiaro una VAR GLOBALE di tipo stringa(vuota); quindi esterna al Ciclo, in cui salvare i numeri generati ---> (1)
+//A questo punto dovrò MOSTRARE all' UTENTE i NUMERI GENERATI attraverso un ALERT. Dichiaro una VAR GLOBALE, quindi esterna al Ciclo, di tipo stringa (vuota);  in cui salvare i numeri generati ---> (1)
 // ----------------------------------------------------------------------------------------------------------------
 
 // STEP 2: Dopo 30 secondi l’utente deve inserire, un prompt alla volta, i numeri che ha visto precedentemente.
@@ -52,7 +52,7 @@ alert('Memorizza questi numeri:' + msg);//(3)
 Esso attiva una FX dopo un certo tempo (in millisecondi)*/
 
 setTimeout(function() {
-	// console.log('Inserisci, uno alla volta, i numeri che hai visto');//Stampa di prova funzionamento TIMING, in console.
+	console.log('Inserisci, uno alla volta, i numeri che hai visto');//Stampa di prova funzionamento TIMING, in console.
 
 	/*Qui, fra le Graffe, riporterò le istruzioni da eseguire dopo 30 sec. Come da traccia: "l’utente deve inserire, un prompt alla volta, i numeri che ha visto precedentemente."
 
@@ -63,7 +63,7 @@ setTimeout(function() {
 
 	 Quindi, se necessario, per un numero di volte anche superiore a 5. Per cui, per le stesse ragioni, riscontrate precedentemente, dovrò appellarmi ad un CICLO WHILE.
 
-	/*Ho bisogno, dunque, come fatto prima, di un ARRAY VUOTO, ovviamente ESTERNO al CICLO, su cui EFFETTUARE i CONTROLLI e che SI POPOLI , di volta in volta, con i VALORI AMMESSI.*/
+	Ho bisogno, dunque, come fatto prima, di un ARRAY VUOTO, ovviamente ESTERNO al CICLO, su cui EFFETTUARE i CONTROLLI e che SI POPOLI , di volta in volta, con i VALORI AMMESSI.*/
 
 	var arrayUserNumber = [];
 
