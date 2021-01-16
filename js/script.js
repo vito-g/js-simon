@@ -52,5 +52,8 @@ alert('Memorizza questi numeri:' + msg);//(3)
 Esso attiva una FX dopo un certo tempo (in millisecondi)*/
 
 setTimeout(function() {
-	console.log('Inserisci, uno alla volta, i numeri che hai visto');
+	console.log('Inserisci, uno alla volta, i numeri che hai visto');//Stampa di prova funzionamento TIMING, in console.
+
+	/*Qui dentro, riporterò le istruzioni da eseguire dopo 30 sec. Come da traccia: "l’utente deve inserire, un prompt alla volta, i numeri che ha visto precedentemente."*/
+
 }, 30000);
