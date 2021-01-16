@@ -53,7 +53,7 @@ Esso attiva una FX dopo un certo tempo (in millisecondi)*/
 
 var arrayUserNumber = []; //(7) Ora, però mi occorre dichiarare una FX per la VALIDAZIONE dei NUM inseriti dall'UTENTE (che passerò lei come argomento assieme al val di lunghezza dell'Array).(Infatti, il dato deve essere oltre che numerico, non già presente nell'Array). La FX sarà esterna al Ciclo ma la sua chiamata verrà effettuata direttamente nel CICLO While. La dichiaro qui di seguito:
 function isUserInputValid(input,userArray) {
-  if (isNaN(input) || userArray.includes(input)) { //Se il DATO inserito NON è NUMERICO o il DATO è cmq numerico ma è GIA' NELL'ARRAY, allora RETURN FALSE.
+  if (isNaN(input) || userArray.includes(input)) { //Se il DATO inserito NON è NUMERICO o il DATO è cmq numerico ma è GIA' NELL'ARRAY, allora RETURN FALSE. Altrimenti RETURN TRUE ---> (8)
     return false;
   } else {
     return true;
@@ -61,7 +61,7 @@ function isUserInputValid(input,userArray) {
 }
 
 setTimeout(function() {
-	// console.log('Inserisci un numero fra quelli visionati precedentemente');//Stampa di prova funzionamento TIMING, in console.
+	console.log('Inserisci un numero fra quelli visionati precedentemente');//Stampa di prova funzionamento TIMING, in console.
 
 	/*Qui, fra le Graffe, riporterò le istruzioni da eseguire dopo 30 sec. Come da traccia: "l’utente deve inserire, un prompt alla volta, i numeri che ha visto precedentemente."*/
 	/*Dunque, il PROMPT va inserito in un CICLO in cui si VERIFICHINO le seguenti CONDIZIONI:
@@ -77,9 +77,21 @@ setTimeout(function() {
 
 	/*e solo se il numero scelto dall'utente non è già incluso nell' Array dell' Utente,
 	lo aggiunge ad esso.*/
-
+  var score = 0; //(9)--->vai a nota (10)
   //(5) Qui sotto il Ciclo while ---> Vai alla nota (6).
-  var userInput = prompt('Inserisci un numero fra quelli visionati precedentemente'); //(4)Salva il dato recuperato da PROMPT nella var "userMemory"
-
+  while (arrayUserNumber.length < 5) { //(11)
+    var userInput = prompt('Inserisci un numero fra quelli visionati precedentemente'); //(4)Salva il dato recuperato da PROMPT nella var "userMemory"
+    if (isUserInputValid(userInput,arrayUserNumber)) { //(8) Se la FX di Validazione RITORNA il val BOOLEANO TRUE esegui il blocco di codice fra le Graffe.
+      arrayUserNumber.push(userInput); //SALVA il NUM (validato) nell'ARRAY UTENTE. Aggiorna poi la var SCORE che dichiaro fuori dal ciclo.--->(9)
+      console.log('Questo l\'array, aggiornato volta per volta, dei numeri inseriti dall\'utente: ' + arrayUserNumber); //Stampa l'array in Console
+    }
+    else {
+      alert('Non hai inserito un numero o il numero è già stato inserito');
+    }
+  }
+  if (arrayPcNumber.includes(userInput)) {
+    score += 1; //(10)
+    console.log('Questo lo SCORE Utente, aggiornato ad ogni tentativo: ' + score); // Stampa il punteggio aggiornato in console --->definisci ora la condizione del ciclo While ---> Vai a nota (11)
+  }
 // }, 30000);
 }, 3000);//Riduciamo, per ora il tempo di attivazione del PROMPT e di tutte le istruzioni di codice che seguiranno. Inseriamo il PROMPT--->(4)
