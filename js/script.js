@@ -42,3 +42,15 @@ while (arrayPcNumber.length < 5) { //A condizione che la LUNGHEZZA dell'ARRAY ri
 alert('Memorizza questi numeri:' + msg);//(3)
 
 //A questo punto dovrò MOSTRARE all' UTENTE i NUMERI GENERATI attraverso un ALERT. Dichiaro una VAR GLOBALE di tipo stringa(vuota); quindi esterna al Ciclo, in cui salvare i numeri generati ---> (1)
+// ----------------------------------------------------------------------------------------------------------------
+
+// STEP 2: Dopo 30 secondi l’utente deve inserire, un prompt alla volta, i numeri che ha visto precedentemente.
+
+/*Concentriamoci dapprima sulla prima parte dello Step 2: "Dopo 30 secondi" l'utente sarà invitato a fare qualcosa. Devo, dunque, impostare un setTimeout, che ha sintassi del tipo:
+
+"setTimeout(nomeFunzione(){istruzioni da eseguire}, tempoDaAspettare);"
+Esso attiva una FX dopo un certo tempo (in millisecondi)*/
+
+setTimeout(function() {
+	console.log('Inserisci, uno alla volta, i numeri che hai visto');
+}, 30000);
