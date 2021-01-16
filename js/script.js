@@ -27,5 +27,13 @@ var arrayPcNumber = [];
 /*E' evidente che, la FX potendo generare più volte uno stesso numero, dovrà esser richiamata, attraverso un Ciclo, tante volte quanto necessario per salvare nell'Array 5 numeri distinti fra loro. Cosa che non posso sapere a priori.
 
 Dunque, il controllo sull'Array non potrà esser fatto attraverso un ciclo FOR (che utilizza un normale contatore).
-Dovrò utilizzare un Ciclo WHILE la cui condizione di CONTROLLO sarà legata esclusivamente alla LUNGHEZZA dell' ARRAY.
+Dovrò utilizzare un Ciclo WHILE la cui condizione di CONTROLLO sarà legata esclusivamente alla LUNGHEZZA dell'ARRAY che voglio ottenere.
 Questa, come da traccia, dovrà esser PARI A 5.*/
+
+while (arrayPcNumber.length < 5) { //A condizione che la LUNGHEZZA dell'ARRAY risulti < 5, esegui il blocco di istruzioni tra graffe.
+	var numberPc = random(1,100);//Genera un numero tra 1 e 100 e salvalo nella var numberPc;
+	if (!arrayPcNumber.includes(numberPc)) {//Se il numero generato, non è già stato incluso nell'Array...
+		arrayPcNumber.push(numberPc);//...includilo.
+	}
+	console.log(arrayPcNumber);
+}
