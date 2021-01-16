@@ -27,13 +27,18 @@ var arrayPcNumber = [];
 /*E' evidente che, la FX potendo generare più volte uno stesso numero, dovrà esser richiamata, attraverso un Ciclo, tante volte quanto necessario per salvare nell'Array 5 numeri distinti fra loro. Cosa che non posso sapere a priori.
 
 Dunque, il controllo sull'Array non potrà esser fatto attraverso un ciclo FOR (che utilizza un normale contatore).
-Dovrò utilizzare un Ciclo WHILE la cui condizione di CONTROLLO sarà legata esclusivamente alla LUNGHEZZA dell'ARRAY che voglio ottenere.
-Questa, come da traccia, dovrà esser PARI A 5.*/
+Dovrò utilizzare un Ciclo WHILE la cui condizione di CONTROLLO sarà legata esclusivamente alla LUNGHEZZA dell'ARRAY che voglio ottenere. Questa, come da traccia, dovrà esser PARI A 5. */
+
+var msg = ' ';//(1) N.B.: Stringa generata in ragione di commento più in basso. La "msg" dovrò posizionarla all'interno delle condizioni dell'IF --->(2)
 
 while (arrayPcNumber.length < 5) { //A condizione che la LUNGHEZZA dell'ARRAY risulti < 5, esegui il blocco di istruzioni tra graffe.
 	var numberPc = random(1,100);//Genera un numero tra 1 e 100 e salvalo nella var numberPc;
 	if (!arrayPcNumber.includes(numberPc)) {//Se il numero generato, non è già stato incluso nell'Array...
 		arrayPcNumber.push(numberPc);//...includilo.
+		msg += ' ' + numberPc; //(2) Aggiungi alla stringa di messaggio, di volta in volta, i numeri generati correttamente e fra loro spaziati. Poi, stampa il tutto in un Alert--->(3)
 	}
-	console.log(arrayPcNumber);
+	console.log(arrayPcNumber);//Stampa l'Array nella Console, mano a mano che si riempie.
 }
+alert('Memorizza questi numeri:' + msg);//(3)
+
+//A questo punto dovrò MOSTRARE all' UTENTE i NUMERI GENERATI attraverso un ALERT. Dichiaro una VAR GLOBALE di tipo stringa(vuota); quindi esterna al Ciclo, in cui salvare i numeri generati ---> (1)
