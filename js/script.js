@@ -52,8 +52,8 @@ alert('Memorizza questi numeri:' + msg);//(3)
 Esso attiva una FX dopo un certo tempo (in millisecondi)*/
 
 var arrayUserNumber = []; //(7) Ora, però mi occorre dichiarare una FX per la VALIDAZIONE dei NUM inseriti dall'UTENTE (che passerò lei come argomento assieme al val di lunghezza dell'Array).(Infatti, il dato deve essere oltre che numerico, non già presente nell'Array). La FX sarà esterna al Ciclo ma la sua chiamata verrà effettuata direttamente nel CICLO While. La dichiaro qui di seguito:
-function isUserInputValid(userInput,userArray) {
-  if (isNaN(userInput) || userArray.includes(userInput)) { //Se il DATO inserito NON è NUMERICO o il DATO è cmq numerico ma è GIA' NELL'ARRAY, allora RETURN FALSE.
+function isUserInputValid(input,userArray) {
+  if (isNaN(input) || userArray.includes(input)) { //Se il DATO inserito NON è NUMERICO o il DATO è cmq numerico ma è GIA' NELL'ARRAY, allora RETURN FALSE.
     return false;
   } else {
     return true;
@@ -78,7 +78,7 @@ setTimeout(function() {
 	/*e solo se il numero scelto dall'utente non è già incluso nell' Array dell' Utente,
 	lo aggiunge ad esso.*/
 
-  //(5) Qui il Ciclo while ---> Vai alla nota (6)
+  //(5) Qui sotto il Ciclo while ---> Vai alla nota (6).
   var userInput = prompt('Inserisci un numero fra quelli visionati precedentemente'); //(4)Salva il dato recuperato da PROMPT nella var "userMemory"
 
 // }, 30000);
