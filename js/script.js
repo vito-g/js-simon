@@ -102,7 +102,6 @@ while (arrayUserNumber.length < 5) { //(11)
   var userInput = parseInt(prompt('Inserisci un numero fra quelli visionati precedentemente')); //(4)Salva il dato recuperato da PROMPT nella var "userMemory"
   if (!isUserInputValid(userInput,arrayUserNumber)) { //(8) Se la FX di Validazione RITORNA il val BOOLEANO FALSE esegui il blocco di codice fra le Graffe.
     alert('Non hai inserito un numero o il numero è già stato inserito');
-
   }
   else {
     arrayUserNumber.push(userInput); //Altrimenti SALVA il NUM (validato) nell'ARRAY UTENTE. Aggiorna poi la var SCORE che dichiaro fuori dal ciclo.--->(9)
@@ -113,6 +112,6 @@ while (arrayUserNumber.length < 5) { //(11)
     }
   }
 }
-alert('Ecco il tuo punteggio: ' + score);
+alert('Ecco il tuo punteggio: ' + score + 'calcolato in base ai numeri da te ricordati: ' + ); //(12) Mi occorre un array, ovviamente esterno al while, in cui io vada a salvare i numeri ricordati dall'utente, per poi svelarli con l'alert qui di fianco ---> (13)
 // }, 30000);
 }, 3000);//Riduciamo, per ora il tempo di attivazione del PROMPT e di tutte le istruzioni di codice ad esso successive. Inseriamo il PROMPT--->(4)
