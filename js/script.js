@@ -52,8 +52,22 @@ alert('Memorizza questi numeri:' + msg);//(3)
 Esso attiva una FX dopo un certo tempo (in millisecondi)*/
 
 setTimeout(function() {
-	console.log('Inserisci, uno alla volta, i numeri che hai visto');//Stampa di prova funzionamento TIMING, in console.
+	// console.log('Inserisci, uno alla volta, i numeri che hai visto');//Stampa di prova funzionamento TIMING, in console.
 
-	/*Qui dentro, riporterò le istruzioni da eseguire dopo 30 sec. Come da traccia: "l’utente deve inserire, un prompt alla volta, i numeri che ha visto precedentemente."*/
+	/*Qui, fra le Graffe, riporterò le istruzioni da eseguire dopo 30 sec. Come da traccia: "l’utente deve inserire, un prompt alla volta, i numeri che ha visto precedentemente."
+
+	Dunque, il prompt va inserito in un CICLO in cui si VERIFICHINO le seguenti CONDIZIONI:
+	-(a)- il DATO inserito sia NUMERICO;
+	-(b)- SEMPRE DIVERSO;
+	-(c)- va da sè che, l' ALERT di input utente debba esser ESEGUITO per un NUMERO di VOLTE NECESSARIO ad ACQUISIRE i 5 DATI RICHIESTI.
+
+	 Quindi, se necessario, per un numero di volte anche superiore a 5. Per cui, per le stesse ragioni, riscontrate precedentemente, dovrò appellarmi ad un CICLO WHILE.
+
+	/*Ho bisogno, dunque, come fatto prima, di un ARRAY VUOTO, ovviamente ESTERNO al CICLO, su cui EFFETTUARE i CONTROLLI e che SI POPOLI , di volta in volta, con i VALORI AMMESSI.*/
+
+	var arrayUserNumber = [];
+
+	/*e solo se il numero scelto dall'utente non è già incluso nell' Array dell' Utente,
+	lo aggiunge ad esso.*/
 
 }, 30000);
