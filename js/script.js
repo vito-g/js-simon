@@ -51,24 +51,35 @@ alert('Memorizza questi numeri:' + msg);//(3)
 "setTimeout(nomeFunzione(){istruzioni da eseguire}, tempoDaAspettare);"
 Esso attiva una FX dopo un certo tempo (in millisecondi)*/
 
+var arrayUserNumber = []; //(7) Ora, però mi occorre dichiarare una FX per la VALIDAZIONE dei NUM inseriti dall'UTENTE (che passerò lei come argomento assieme al val di lunghezza dell'Array).(Infatti, il dato deve essere oltre che numerico, non già presente nell'Array). La FX sarà esterna al Ciclo ma la sua chiamata verrà effettuata direttamente nel CICLO While. La dichiaro qui di seguito:
+function isUserInputValid(userInput,userArray) {
+  if (isNaN(userInput) || userArray.includes(userInput)) { //Se il DATO inserito NON è NUMERICO o il DATO è cmq numerico ma è GIA' NELL'ARRAY, allora RETURN FALSE.
+    return false;
+  } else {
+    return true;
+  }
+}
+
 setTimeout(function() {
-	console.log('Inserisci, uno alla volta, i numeri che hai visto');//Stampa di prova funzionamento TIMING, in console.
+	// console.log('Inserisci un numero fra quelli visionati precedentemente');//Stampa di prova funzionamento TIMING, in console.
 
 	/*Qui, fra le Graffe, riporterò le istruzioni da eseguire dopo 30 sec. Come da traccia: "l’utente deve inserire, un prompt alla volta, i numeri che ha visto precedentemente."*/
-  var userMemory = prompt('Inserisci un numero fra quelli visionati precedentemente'); //(4)
 	/*Dunque, il PROMPT va inserito in un CICLO in cui si VERIFICHINO le seguenti CONDIZIONI:
 	-(a)- il DATO inserito sia NUMERICO;
 	-(b)- SEMPRE DIVERSO;
 	-(c)- va da sè che, il PROMPT di input utente debba esser ESEGUITO per un NUMERO di VOLTE NECESSARIO ad ACQUISIRE i 5 DATI RICHIESTI.
 
-	 Quindi, se necessario, per un numero di volte anche superiore a 5. Per cui, per le stesse ragioni, riscontrate precedentemente, dovrò appellarmi ad un CICLO WHILE.
+	 Quindi, se necessario, per un numero di volte anche superiore a 5. Per cui, per le stesse ragioni, riscontrate precedentemente, dovrò appellarmi ad un CICLO WHILE. A partire dal punto (5) */
 
-	Ho bisogno, dunque, come fatto prima, di un ARRAY VUOTO, ovviamente ESTERNO al CICLO, su cui EFFETTUARE i CONTROLLI e che SI POPOLI , di volta in volta, con i VALORI AMMESSI.*/
+	/*Ho bisogno, dunque, come fatto prima, di un ARRAY VUOTO, ovviamente ESTERNO al CICLO, su cui EFFETTUARE i CONTROLLI e che SI POPOLI , di volta in volta, con i VALORI AMMESSI.*/
 
-	var arrayUserNumber = [];
+	// var arrayUserNumber = [];//(6) Sarà opportuno tenere la var di Array fuori da questa FX--->(7)
 
 	/*e solo se il numero scelto dall'utente non è già incluso nell' Array dell' Utente,
 	lo aggiunge ad esso.*/
 
+  //(5) Qui il Ciclo while ---> Vai alla nota (6)
+  var userInput = prompt('Inserisci un numero fra quelli visionati precedentemente'); //(4)Salva il dato recuperato da PROMPT nella var "userMemory"
+
 // }, 30000);
-}, 3000);//Riduciamo, per ora il tempo di attivazione del PROMPT e di tutte le istruzioni di codice che seguiranno. INseriamo il PROMPT--->(4)
+}, 3000);//Riduciamo, per ora il tempo di attivazione del PROMPT e di tutte le istruzioni di codice che seguiranno. Inseriamo il PROMPT--->(4)
