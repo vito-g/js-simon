@@ -54,9 +54,9 @@ Esso attiva una FX dopo un certo tempo (in millisecondi)*/
 setTimeout(function() {
 	console.log('Inserisci, uno alla volta, i numeri che hai visto');//Stampa di prova funzionamento TIMING, in console.
 
-	/*Qui, fra le Graffe, riporterò le istruzioni da eseguire dopo 30 sec. Come da traccia: "l’utente deve inserire, un prompt alla volta, i numeri che ha visto precedentemente."
-
-	Dunque, il PROMPT va inserito in un CICLO in cui si VERIFICHINO le seguenti CONDIZIONI:
+	/*Qui, fra le Graffe, riporterò le istruzioni da eseguire dopo 30 sec. Come da traccia: "l’utente deve inserire, un prompt alla volta, i numeri che ha visto precedentemente."*/
+  var userMemory = prompt('Inserisci un numero fra quelli visionati precedentemente'); //(4)
+	/*Dunque, il PROMPT va inserito in un CICLO in cui si VERIFICHINO le seguenti CONDIZIONI:
 	-(a)- il DATO inserito sia NUMERICO;
 	-(b)- SEMPRE DIVERSO;
 	-(c)- va da sè che, il PROMPT di input utente debba esser ESEGUITO per un NUMERO di VOLTE NECESSARIO ad ACQUISIRE i 5 DATI RICHIESTI.
@@ -71,4 +71,4 @@ setTimeout(function() {
 	lo aggiunge ad esso.*/
 
 // }, 30000);
-}, 3000);//Riduciamo, per ora il tempo di attivazione del PROMPT e di tutte le istruzioni di codice che seguiranno
+}, 3000);//Riduciamo, per ora il tempo di attivazione del PROMPT e di tutte le istruzioni di codice che seguiranno. INseriamo il PROMPT--->(4)
