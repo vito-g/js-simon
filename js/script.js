@@ -56,7 +56,7 @@ setTimeout(function() {
 
 	/*Qui, fra le Graffe, riporterò le istruzioni da eseguire dopo 30 sec. Come da traccia: "l’utente deve inserire, un prompt alla volta, i numeri che ha visto precedentemente."
 
-	Dunque, il prompt va inserito in un CICLO in cui si VERIFICHINO le seguenti CONDIZIONI:
+	Dunque, il PROMPT va inserito in un CICLO in cui si VERIFICHINO le seguenti CONDIZIONI:
 	-(a)- il DATO inserito sia NUMERICO;
 	-(b)- SEMPRE DIVERSO;
 	-(c)- va da sè che, il PROMPT di input utente debba esser ESEGUITO per un NUMERO di VOLTE NECESSARIO ad ACQUISIRE i 5 DATI RICHIESTI.
@@ -70,4 +70,5 @@ setTimeout(function() {
 	/*e solo se il numero scelto dall'utente non è già incluso nell' Array dell' Utente,
 	lo aggiunge ad esso.*/
 
-}, 30000);
+// }, 30000);
+}, 3000);//Riduciamo, per ora il tempo di attivazione del PROMPT e di tutte le istruzioni di codice che seguiranno
