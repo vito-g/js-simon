@@ -77,21 +77,42 @@ setTimeout(function() {
 
 	/*e solo se il numero scelto dall'utente non è già incluso nell' Array dell' Utente,
 	lo aggiunge ad esso.*/
-  var score = 0; //(9)--->vai a nota (10)
-  //(5) Qui sotto il Ciclo while ---> Vai alla nota (6).
-  while (arrayUserNumber.length < 5) { //(11)
-    var userInput = prompt('Inserisci un numero fra quelli visionati precedentemente'); //(4)Salva il dato recuperato da PROMPT nella var "userMemory"
-    if (isUserInputValid(userInput,arrayUserNumber)) { //(8) Se la FX di Validazione RITORNA il val BOOLEANO TRUE esegui il blocco di codice fra le Graffe.
-      arrayUserNumber.push(userInput); //SALVA il NUM (validato) nell'ARRAY UTENTE. Aggiorna poi la var SCORE che dichiaro fuori dal ciclo.--->(9)
-      console.log('Questo l\'array, aggiornato volta per volta, dei numeri inseriti dall\'utente: ' + arrayUserNumber); //Stampa l'array in Console
-    }
-    else {
-      alert('Non hai inserito un numero o il numero è già stato inserito');
+//   var score = 0; //(9)--->vai a nota (10)
+//   //(5) Qui sotto il Ciclo while ---> Vai alla nota (6).
+//   while (arrayUserNumber.length < 5) { //(11)
+//     var userInput = prompt('Inserisci un numero fra quelli visionati precedentemente'); //(4)Salva il dato recuperato da PROMPT nella var "userMemory"
+//     if (isUserInputValid(userInput,arrayUserNumber)) { //(8) Se la FX di Validazione RITORNA il val BOOLEANO TRUE esegui il blocco di codice fra le Graffe.
+//       arrayUserNumber.push(userInput); //SALVA il NUM (validato) nell'ARRAY UTENTE. Aggiorna poi la var SCORE che dichiaro fuori dal ciclo.--->(9)
+//       console.log('Questo l\'array, aggiornato volta per volta, dei numeri inseriti dall\'utente: ' + arrayUserNumber); //Stampa l'array in Console
+//     }
+//     else {
+//       alert('Non hai inserito un numero o il numero è già stato inserito');
+//     }
+//   }
+//   if (arrayPcNumber.includes(userInput)) {
+//     score += 1; //(10)
+//     console.log('Questo lo SCORE Utente, aggiornato ad ogni tentativo: ' + score); // Stampa il punteggio aggiornato in console --->definisci ora la condizione del ciclo While ---> Vai a nota (11)
+//   }
+// // }, 30000);
+// }, 3000);//Riduciamo, per ora il tempo di attivazione del PROMPT e di tutte le istruzioni di codice ad esso successive. Inseriamo il PROMPT--->(4)
+
+var score = 0; //(9)--->vai a nota (10)
+//(5) Qui sotto il Ciclo while ---> Vai alla nota (6).
+while (arrayUserNumber.length < 5) { //(11)
+  var userInput = parseInt(prompt('Inserisci un numero fra quelli visionati precedentemente')); //(4)Salva il dato recuperato da PROMPT nella var "userMemory"
+  if (!isUserInputValid(userInput,arrayUserNumber)) { //(8) Se la FX di Validazione RITORNA il val BOOLEANO FALSE esegui il blocco di codice fra le Graffe.
+    alert('Non hai inserito un numero o il numero è già stato inserito');
+
+  }
+  else {
+    arrayUserNumber.push(userInput); //Altrimenti SALVA il NUM (validato) nell'ARRAY UTENTE. Aggiorna poi la var SCORE che dichiaro fuori dal ciclo.--->(9)
+    console.log('Questo l\'array, aggiornato volta per volta, dei numeri inseriti dall\'utente: ' + arrayUserNumber); //Stampa l'array in Console
+    if (arrayPcNumber.includes(userInput)) {
+      score += 1; //(10)
+      console.log('Questo lo SCORE Utente, aggiornato ad ogni tentativo: ' + score); // Stampa il punteggio aggiornato in console --->definisci ora la condizione del ciclo While ---> Vai a nota (11)
     }
   }
-  if (arrayPcNumber.includes(userInput)) {
-    score += 1; //(10)
-    console.log('Questo lo SCORE Utente, aggiornato ad ogni tentativo: ' + score); // Stampa il punteggio aggiornato in console --->definisci ora la condizione del ciclo While ---> Vai a nota (11)
-  }
+}
+alert('Ecco il tuo punteggio: ' + score);
 // }, 30000);
 }, 3000);//Riduciamo, per ora il tempo di attivazione del PROMPT e di tutte le istruzioni di codice ad esso successive. Inseriamo il PROMPT--->(4)
