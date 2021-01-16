@@ -97,6 +97,7 @@ setTimeout(function() {
 // }, 3000);//Riduciamo, per ora il tempo di attivazione del PROMPT e di tutte le istruzioni di codice ad esso successive. Inseriamo il PROMPT--->(4)
 
 var score = 0; //(9)--->vai a nota (10)
+var hitTheNumber = []; //(13) Qui salvo i NUM AZZECCATI dall'UTENTE ---> vai a nota (14)
 //(5) Qui sotto il Ciclo while ---> Vai alla nota (6).
 while (arrayUserNumber.length < 5) { //(11)
   var userInput = parseInt(prompt('Inserisci un numero fra quelli visionati precedentemente')); //(4)Salva il dato recuperato da PROMPT nella var "userMemory"
@@ -108,10 +109,11 @@ while (arrayUserNumber.length < 5) { //(11)
     console.log('Questo l\'array, aggiornato volta per volta, dei numeri inseriti dall\'utente: ' + arrayUserNumber); //Stampa l'array in Console
     if (arrayPcNumber.includes(userInput)) {
       score += 1; //(10)
+      hitTheNumber.push(userInput);
       console.log('Questo lo SCORE Utente, aggiornato ad ogni tentativo: ' + score); // Stampa il punteggio aggiornato in console --->definisci ora la condizione del ciclo While ---> Vai a nota (11)
     }
   }
 }
-alert('Ecco il tuo punteggio: ' + score + 'calcolato in base ai numeri da te ricordati: ' + ); //(12) Mi occorre un array, ovviamente esterno al while, in cui io vada a salvare i numeri ricordati dall'utente, per poi svelarli con l'alert qui di fianco ---> (13)
+alert('SCORE: ' + score + '. Numeri da te ricordati: ' + hitTheNumber); //(12) Mi occorre un array, ovviamente esterno al while, in cui io vada a salvare i numeri ricordati dall'utente, per poi svelarli con l'alert qui di fianco a sx ---> (13)
 // }, 30000);
 }, 3000);//Riduciamo, per ora il tempo di attivazione del PROMPT e di tutte le istruzioni di codice ad esso successive. Inseriamo il PROMPT--->(4)
