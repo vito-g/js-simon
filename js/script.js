@@ -94,4 +94,4 @@ setTimeout(function() {
     console.log('Questo lo SCORE Utente, aggiornato ad ogni tentativo: ' + score); // Stampa il punteggio aggiornato in console --->definisci ora la condizione del ciclo While ---> Vai a nota (11)
   }
 // }, 30000);
-}, 3000);//Riduciamo, per ora il tempo di attivazione del PROMPT e di tutte le istruzioni di codice che seguiranno. Inseriamo il PROMPT--->(4)
+}, 3000);//Riduciamo, per ora il tempo di attivazione del PROMPT e di tutte le istruzioni di codice ad esso successive. Inseriamo il PROMPT--->(4)
